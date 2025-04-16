@@ -1,0 +1,28 @@
+:root{
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+
+.box{
+    margin-left: 40%;
+    display: flex;
+    width: 500px;
+    height: 500px;
+    justify-content: left;
+    align-items: flex-start;
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-size: 500px;
+}
+
+form{
+    padding-top: 40px;
+}
+
+input{
+    font-family: 'Courier New', Courier, monospace;
+    border-color: #EDD02B;
+    background-color: #C7A32E;
+}
