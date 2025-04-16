@@ -1,0 +1,31 @@
+<!-- 
+    Crea la tua To-Do List mediante i metodi visti nel video.
+    Crea una funzione che ti permetterà di:
+
+    Creare una lista aggiungendo il task desiderato mediante il bottone Aggiungi.
+    Creare un checkbox per ogni task aggiunto. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css">
+<title>Document</title>
+</head>
+
+<body class="container">
+  <!-- <img src="background.webp" alt="cats at night pixeled"> -->
+  <button id="cat-button" onclick="toggleButton()">Cat Button</button>
+  <div class="elements">
+    <h1>To-do List</h1>
+    <input type="text" placeholder="..." />
+    <button onclick="addProduct()">Aggiungi</button>
+    <ul></ul>
+    <button class="remove" onclick="removeProduct()">Rimuovi</button>
+  </div>
+<script src="./index.js"></script>
+</body>
+</html>
+
