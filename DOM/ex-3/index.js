@@ -12,6 +12,15 @@ function addProduct() {
     const checkbox = document.createElement("input");
     checkbox.setAttribute("type", "checkbox");
     li.appendChild(checkbox);
+
+    //TO PUT THE REMOVE BUTTON RIGHT WHERE THE TASK IS S
+
+    // const rimuovi = document.createElement("button");
+    // rimuovi.innerText = "Rimuovi";
+    // rimuovi.onclick = function () {
+    //     li.remove();
+    // };
+    // li.appendChild(rimuovi);
 }
 
 function removeProduct() {
