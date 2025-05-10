@@ -39,6 +39,7 @@
     <p class="printedform"></p>
     <script>
         const btn = document.querySelector(".btn");
+        const titleName = document.querySelector(".title-name");
         
         const input = document.querySelectorAll("input")
         //INPUT is an ARRAY of OBJECTS
@@ -49,12 +50,21 @@
             localStorage.setItem("email", email.value)
             localStorage.setItem("firstname", firstname.value)
             localStorage.setItem("lastname", lastname.value)
+            titleName.innerText = localStorage.getItem("firstname")
 
         })
+        
+        titleName.innerText = localStorage.getItem("firstname")
 
-        const titleName = document.querySelector(".title-name");
 
-        titleName.innerText = firstname.value
+        //DOMContentLoaded => event that fires when the HTML has been parsed and other deferred script have been executed and downloaded; 
+                            //does not wait for the style sheets and images;
+
+        // window.addEventListener('DOMContentLoaded', (event) => { 
+        //     const storedFirstname = localStorage.getItem('firstname'); 
+        //     if(storedFirstname) { 
+        //         document.querySelector('.title-name').innerText = storedFirstname; 
+        //     } });
 
     </script>
 </body>

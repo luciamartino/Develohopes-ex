@@ -46,6 +46,8 @@
         btn.addEventListener("click", () => {
             
             inputs.forEach(input => sessionStorage.setItem(input.name, input.value))
+            const firstname  = document.querySelector(".firstname")
+            titleName.innerText = sessionStorage.getItem("firstname")
 
             //DESTRUCTURING
             // const [email, firstname, lastname] = inputs;
@@ -54,7 +56,9 @@
             // sessionStorage.setItem("lastname", lastname.value)
         })
 
-        titleName.innerText = firstname.value;
+        const firstname  = document.querySelector(".firstname")
+        titleName.innerText = sessionStorage.getItem("firstname")
+
     </script>
 </body>
 

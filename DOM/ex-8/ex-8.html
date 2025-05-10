@@ -21,11 +21,13 @@
             align-items: center;
             justify-content: center;
         }
+
     </style>
 </head>
 <body>
     <h1> The Card Name is <span class="character-name"></span>
     </h1>
+    <h2>LOADING</h2>
     <img> 
     <script>
 
@@ -39,13 +41,20 @@
                 const characterName = document.querySelector(".character-name")
                 characterName.innerText = data.name
 
+                
+
                 const image = document.querySelector("img")
                 image.setAttribute("src", "https://ringsdb.com/" + data.imagesrc)
+
             } catch (error) {
                 console.log(error)
             }
         }
         getData()
+
+
+
+
 
     </script>
 </body>
