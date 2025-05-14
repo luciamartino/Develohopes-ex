@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+button{
+    background-color: rebeccapurple;
+    color:violet;
+    padding: 10%;
+    border-radius: 15%;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: violet;
+    color: rebeccapurple;
+}
