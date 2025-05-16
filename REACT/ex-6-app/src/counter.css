@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    padding: 30px;
+    background-color: #5dbea3;
+    color: #33b249;
+    border-radius: 25px 25px;
+    border: none;
+    margin: 10px;
+    font-size: 1rem;
+}
+
+button:hover{
+    color: #5dbea3;
+    background-color: #33b249;
+}
+
+h2{
+    padding: 10px;
+    border: 3px solid #33b249;
+    border-radius: 25px 25px;
+}
+
+h2:hover{
+    border-color: #5dbea3;
+}
