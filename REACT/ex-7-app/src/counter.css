@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    border: solid 1px brown;
+    padding: 60px;
+    width: fit-content;
+    margin-left: 37%;
+    border-radius: 25px 25px;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+
+button{
+    color: red;
+    background-color: brown;
+    padding: 20px 30px;
+    border-radius: 25px 25px;
+}
+
+button:hover{
+    color:brown;
+    background-color: red;
+}
