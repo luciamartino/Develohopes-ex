@@ -15,7 +15,7 @@ export function Counter({initialValue, incrementValue}){
     return (
         <div>
             <h2>The current Counter is: {counter} </h2>
-            <button onClick={handleIncrementButton}>INCREMENT</button>
+            <button onClick={handleIncrementButton}>INCREMENT OF {incrementValue}</button>
         </div>
     )
 }

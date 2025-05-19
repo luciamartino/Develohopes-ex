@@ -5,7 +5,12 @@ export function MouseClicker(){
     }
 
     function handleMouseClick2(event){
-        console.log(event.currentTarget.name)
+        if(event.target.src == undefined){
+            console.log("Click on the IMAGE")
+        }else{
+            console.log(event.target.src)
+
+        }
     }
     return (
         <div>

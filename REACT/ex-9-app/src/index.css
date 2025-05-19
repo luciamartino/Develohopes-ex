@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: solid 2px green;
+    border-radius: 25px 25px;
+    width: fit-content;
+    margin-left: 37%;
+    padding: 40px;
+    color: #2A623D;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+.received{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sent{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sent-text{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.received-text{
+        display: flex;
+    justify-content: flex-start;
+}
+
+button{
+    border-radius: 25px 25px;
+    background-color: #1A472A;
+    color: white;
+    padding: 7px 30px;
+
+}
