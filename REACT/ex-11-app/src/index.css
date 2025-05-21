@@ -1,0 +1,56 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #6A0002;
+    font-family: "Press Start 2P", system-ui;
+    background-image: url("../public/lofi-girl.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 400px;
+    max-height: 600px;
+    padding: 50px;
+    margin: 0 auto; 
+    border-radius: 25px 25px;
+    color: #004950;
+    background-size: contain;
+    overflow: hidden;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+input{
+    padding: 10px;
+    margin: 10px;
+    border-color: #6A0002;
+    border-radius: 25px 25px;
+    color: #004950;
+
+}
+
+button{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px 25px;
+    border-color: #6A0002;
+    color: #6A0002;
+    background-color: #CB1700;
+}
+
+button:hover{
+    color:#CB1700;
+    background-color: #6A0002;
+}
+
