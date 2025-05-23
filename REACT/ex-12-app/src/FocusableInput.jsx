@@ -11,6 +11,8 @@ export function FocusableInput(){
         if(!hasMounted.current){ //if hasMounted.current is false, it means that this equation with ! is true, therefore the if succeeded 
             console.log("First time mounted")
             hasMounted.current = true //it's set on true because now the if is never true so it cannot run => a way to run the code only once
+        }else{
+            console.log("Second time mounted")
         }
     }, []) //empty [] in order to run it once
 

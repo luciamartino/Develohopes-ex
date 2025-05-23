@@ -1,0 +1,42 @@
+:root{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+body{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("../public/background.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    max-width: 400px;
+    max-height: 600px;
+    padding: 50px;
+    margin: 0 auto; 
+}
+
+.elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding-top: 5%;
+}
+
+
+li::marker {
+    color: white;
+    font-size: 1rem;
+    content: '★ ';
+  }
+
+button{   
+    margin-top: 10px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
