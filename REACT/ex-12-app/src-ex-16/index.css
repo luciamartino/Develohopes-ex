@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: brown;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+}
+
+button{
+    background-color: red;
+    color: brown;
+    padding: 10px;
+    border-radius: 25px 25px;
+    font-weight: 700;
+}
+
+input{
+    border: 1px solid red;
+    border-radius: 25px 25px;
+    padding: 5px;
+}
+
+input.checkbox{
+    accent-color: red;
+}
