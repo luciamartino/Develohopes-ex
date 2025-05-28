@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export function Container({title, children}){
 
-    const [ collapsed, setCollapsed ] = useState(false)
+    const [ collapsed, setCollapsed ] = useState(true)
 
     function handleToggleCollapsed(){
         setCollapsed(c => !c)
@@ -15,11 +15,12 @@ export function Container({title, children}){
             padding: "10px",
             borderRadius: "25px 25px"
         }}>
-            <div class="top">
-                <h1>
+            <div className="top">
+                <h1 onClick={handleToggleCollapsed} style={{
+                    cursor: "pointer"
+                }}>
                     {title} 
                 </h1>
-                <button onClick={handleToggleCollapsed}>TOGGLE</button>
             </div>
             <div>
                 {collapsed && <div>{children}</div>}

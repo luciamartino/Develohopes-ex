@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+
+}
+
+select{
+    font-family:'Courier New', Courier, monospace;
+    background-color: brown;
+    color: red;
+    padding: 10px;
+    border-radius: 25px 25px;
+
+}
