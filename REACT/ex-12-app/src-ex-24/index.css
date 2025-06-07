@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("./images.jpg") ;
+    background-repeat: no-repeat; */
+}
+
+button{
+    color:midnightblue;
+    background-color: lightblue;
+    padding: 10px;
+    border-color: midnightblue;
+    border-radius: 25px 25px;
+}
+
+button:hover{
+    color:lightblue;
+    background-color: midnightblue;
+}
+
+input{
+    border-color: midnightblue;
+    padding: 10px;
+    border-radius: 25px 25px;
+
+}
+
+.pokemonbox{
+    border: 2px solid midnightblue;
+    padding: 10px;
+    border-radius: 25px 25px;
+    color: midnightblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}

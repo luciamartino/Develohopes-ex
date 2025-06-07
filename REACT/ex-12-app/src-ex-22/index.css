@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    color: red;
+    background-color: brown;
+}
+
+a{
+    padding: 10px;
+    border: 1px solid brown;
+    text-decoration: none;
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    border-color: red;
+    color: red;
+    padding: 10px;
+    background-color: brown;
+    border-radius: 25px 25px;
+
+}

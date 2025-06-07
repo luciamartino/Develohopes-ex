@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: midnightblue;
+
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    color:midnightblue;
+    background-color: lightblue;
+    padding: 10px;
+    border-color: midnightblue;
+}
+
+button:hover{
+    color:lightblue;
+    background-color: midnightblue;
+}
+
+input{
+    border-color: midnightblue;
+    padding: 10px;
+}
