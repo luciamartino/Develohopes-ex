@@ -3,6 +3,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family:'Segoe UI', sans-serif;
+    color: brown;
 }
 
 nav{
@@ -15,8 +16,8 @@ nav{
 
 a{
     padding: 10px;
-    border: 1px solid brown;
     text-decoration: none;
+    color: red;
 }
 
 .welcome{
@@ -32,4 +33,16 @@ button{
     background-color: brown;
     border-radius: 25px 25px;
 
+}
+
+ul {
+    list-style: none;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid brown;
 }

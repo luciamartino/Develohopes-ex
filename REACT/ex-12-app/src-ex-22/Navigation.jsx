@@ -5,7 +5,7 @@ export function Navigation() {
     <nav>
       <Link to="/">Home</Link>
       <Link to="/counter">Counter</Link>
-      <Link to="/user/:username">User</Link>
+      <Link to="/users/:username">Users</Link>
     </nav>
   );
 }

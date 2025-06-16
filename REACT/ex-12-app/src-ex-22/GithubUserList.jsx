@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
-import { Link, Outlet } from "react-router"
+import { Link, Outlet, useNavigate } from "react-router"
 
 export function GithubUserList(){
-    const [ users, setUsers ] = useState(null)
+    const [users, setUsers ] = useState(null)
     const [loading, setLoading] = useState(true)
-    const [ error, setError] = useState(null)
+    const [error, setError] = useState(null)
+    const [search, setSearch] = useState("")
+
+    const navigate = useNavigate()
 
 useEffect(() => {
     fetch(`https://api.github.com/users`)
@@ -42,17 +45,29 @@ if(!users){
     }}>no user available</p>
     }
 
+    function handleSubmit(e){
+    e.preventDefault()
+    if(search){
+        navigate(`/users/${search}`)
+    }
+    setSearch("")
+    }
+
     
     return(
         <>
-        <Outlet />
-        <ul>
-            {users.map((u) => {
+        <form onSubmit={handleSubmit}>
+            <input value={search} onChange={(e) => setSearch(e.target.value)}/>
+            <button type="submit">just send it</button>
+        </form>
+        <ul className="list">
+            {users.map((u) => (
                 <li key={u.login}>
                     <Link to={u.login}>{u.login}</Link>
                 </li>
-            })}
+            ))}
         </ul>
+        <Outlet />
         </>
     )
 }
