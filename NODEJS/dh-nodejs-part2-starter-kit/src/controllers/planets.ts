@@ -59,6 +59,18 @@ async function deletedById(req: Request, res: Response){
     res.status(200).json(planets)
 }
 
+async function createImage(req: Request, res: Response){
+    const {id} = req.params;
+    const fileName = req.file?.path;
+
+    if(fileName){
+        await db.none(`UPDATE planets SET image=$2 WHERE id=$1`, [id, fileName])
+        res.status(201).json({msg: "The image was created!"})
+    }else{
+        res.status(400).json({msg: "There was an error"})
+    }
+}
+
 export {
-    getAll, getOneByID, create, updateById, deletedById
+    getAll, getOneByID, create, updateById, deletedById, createImage
 }
