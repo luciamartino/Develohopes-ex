@@ -3,9 +3,11 @@ import morgan from "morgan";
 import "express-async-errors";
 import dotenv from "dotenv";
 import { router } from "./routes/routes.js";
+import setupDb from "./setupDb.js";
 
 dotenv.config();
 
+setupDb(); //per settare il database
 const app = express();
 
 const port = process.env.PORT;

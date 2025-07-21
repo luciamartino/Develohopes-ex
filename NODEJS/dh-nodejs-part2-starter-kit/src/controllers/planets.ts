@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import db from "../db";
 
 type Planet = {
 id: number,
@@ -18,36 +19,42 @@ let planets: Planets = [
 },
 ];
 
-const getAll = (req: Request, res: Response) => {
+async function getAll(req: Request, res: Response){
+    const planets = await db.many("SELECT * FROM planets")
     res.status(200).json(planets)
 };
 
-const getOneByID = (req: Request, res: Response) => {
+async function getOneByID(req: Request, res: Response){
     const {id} = req.params;
-    const planet = planets.find(p => p.id === Number(id));
+    const planet = await db.oneOrNone("SELECT * FROM planets WHERE id=$1", [id])
+    // const planet = planets.find(p => p.id === Number(id));
 
     res.status(200).json(planet)
 }
 
-const create = (req: Request, res: Response) => {
+async function create(req: Request, res: Response){
     const {id, name} = req.body;
     const newPlanet = {id, name};
-    planets = [...planets, newPlanet];
+    await db.none("INSERT INTO planets (name) VALUES ($1), [name]")
+    // planets = [...planets, newPlanet];
 
     res.status(200).json({msg: "The new planet has been created successfully!"})
 }
 
-const updateById = (req: Request, res: Response) => {
+async function updateById(req: Request, res: Response){
     const {id} = req.params;
     const {name} = req.body;
-    planets = planets.map(p => p.id === Number(id) ? {...p, name} : p);
+    await db.none("UPDATE planets SET name=$2 WHERE id=$1", [id, name])
+    // planets = planets.map(p => p.id === Number(id) ? {...p, name} : p);
 
     res.status(200).json({msg: "The planet was updated!"})
 }
 
-const deletedById = (req: Request, res: Response) => {
+async function deletedById(req: Request, res: Response){
     const {id} = req.params;
-    planets = planets.filter(p => p.id !== Number(id));
+    await db.none("DELETE FROM planets WHERE id=$1", Number(id))
+
+    // planets = planets.filter(p => p.id !== Number(id));
 
     res.status(200).json(planets)
 }
