@@ -1,0 +1,29 @@
+.chatroom {
+  width: 400px;
+  margin: 20px auto;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 70%;
+}
+
+.user-msg {
+  background-color: #d1e7dd;
+  text-align: right;
+  margin-left: auto;
+}
+
+.bot-msg {
+  background-color: #f8d7da;
+  text-align: left;
+  margin-right: auto;
+}
